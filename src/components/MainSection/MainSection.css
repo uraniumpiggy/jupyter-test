@@ -1,0 +1,89 @@
+.grid {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected {
+    color: #4FE24A !important;
+}
+
+.grid-menu-row {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.grid-menu-select {
+    display: none;
+    width: 100%;
+    padding: 10% 0;
+}
+
+.grid-menu-select select {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem .7rem;
+    color: #9E8769;
+    outline: 1px solid #EF6D58;
+    width: inherit;
+
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='coral' stroke='coral' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .7rem center;
+    background-size: 1em;
+}
+
+.grid-menu-select option {
+    outline: none;
+}
+
+.grid-menu-row p {
+    cursor: pointer;
+    color: #9E8769;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.add-items-button-wrapper {
+    margin: 40px auto;    
+}
+
+.add-items-button-wrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: .5rem 1rem;
+}
+
+@media screen and (max-width: 1039px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-menu-row {
+        display: none;
+    }
+
+    .grid-menu-select {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .main-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
